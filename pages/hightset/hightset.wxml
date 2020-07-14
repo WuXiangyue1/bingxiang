@@ -1,0 +1,102 @@
+<view class="container">
+	<image class='background-image' src='/images/background2.png' mode="aspectFill"></image>
+	<view class="content">
+		<view class="box">
+			<view class="list-title">
+				<view>非专业人士勿调</view>
+			</view>
+			<view class="line"></view>
+			<picker bindchange="ChangeStartDelay" value="{{startDelay_type}}" range="{{startDelay}}">
+				<view class="list-title">
+					<view>启动延时</view>
+					<view class="right">{{startDelay[startDelay_type]}}分钟＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+
+			<picker bindchange="ChangeLeftRetDiff" value="{{leftRetDiff_type}}" range="{{leftRetDiff}}">
+				<view class="list-title">
+					<view>左箱开机温度回差</view>
+					<view class="right">{{leftRetDiff[leftRetDiff_type]}}{{unit[unit_type]}} ＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+
+			<picker bindchange="ChangeLeftTCHalt" value="{{leftTCHalt_type}}" range="{{leftTCHalt}}">
+				<view class="list-title">
+					<view>左箱关机温度回差</view>
+					<view class="right">{{leftTCHalt[leftTCHalt_type]}}{{unit[unit_type]}} ＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+
+			<picker bindchange="ChangeLeftTCHot" value="{{leftTCHot_type}}" range="{{leftTCHot}}">
+				<view class="list-title">
+					<view>左箱T≥-6℃温度补偿</view>
+					<view class="right">{{leftTCHot[leftTCHot_type]}} {{unit[unit_type]}}＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+
+			<picker bindchange="ChangeLeftTCMid" value="{{leftTCMid_type}}" range="{{leftTCMid}}">
+				<view class="list-title">
+					<view>左箱-12℃≤T＜-6℃温度补偿</view>
+					<view class="right">{{leftTCMid[leftTCMid_type]}} {{unit[unit_type]}}＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+
+			<picker bindchange="ChangeLeftTCCold" value="{{leftTCCold_type}}" range="{{leftTCCold}}">
+				<view class="list-title">
+					<view>左箱T＜12℃温度补偿</view>
+					<view class="right">{{leftTCCold[leftTCCold_type]}} {{unit[unit_type]}}＞</view>
+				</view>
+			</picker>
+			<view class="line"></view>
+			<view hidden="{{rightEmpty}}">
+				<picker bindchange="ChangeRightRetDiff" value="{{rightRetDiff_type}}" range="{{rightRetDiff}}">
+					<view class="list-title">
+						<view>右箱开机温度回差</view>
+						<view class="right">{{rightRetDiff[rightRetDiff_type]}} {{unit[unit_type]}}＞</view>
+					</view>
+				</picker>
+				<view class="line"></view>
+
+				<picker bindchange="ChangeRightTCHalt" value="{{rightTCHalt_type}}" range="{{rightTCHalt}}">
+					<view class="list-title">
+						<view>右箱关机温度回差</view>
+						<view class="right">{{rightTCHalt[rightTCHalt_type]}} {{unit[unit_type]}}＞</view>
+					</view>
+				</picker>
+				<view class="line"></view>
+
+
+
+
+				<picker bindchange="ChangeRightTCHot" value="{{rightTCHot_type}}" range="{{rightTCHot}}">
+					<view class="list-title">
+						<view>右箱T≥-6℃温度补偿</view>
+						<view class="right">{{rightTCHot[rightTCHot_type]}} {{unit[unit_type]}}＞</view>
+					</view>
+				</picker>
+				<view class="line"></view>
+
+				<picker bindchange="ChangeRightTCMid" value="{{rightTCMid_type}}" range="{{rightTCMid}}">
+					<view class="list-title">
+						<view>右箱-12℃≤T＜-6℃温度补偿</view>
+						<view class="right">{{rightTCMid[rightTCMid_type]}} {{unit[unit_type]}}＞</view>
+					</view>
+				</picker>
+				<view class="line"></view>
+
+				<picker bindchange="ChangeRightTCCold" value="{{rightTCCold_type}}" range="{{rightTCCold}}">
+					<view class="list-title">
+						<view>右箱T＜12℃温度补偿</view>
+						<view class="right">{{rightTCCold[rightTCCold_type]}} {{unit[unit_type]}}＞</view>
+					</view>
+				</picker>
+				<view class="line-last"></view>
+			</view>
+		</view>
+	</view>
+</view>

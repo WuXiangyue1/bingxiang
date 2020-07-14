@@ -1,0 +1,39 @@
+<view class="container">
+
+
+	<image class='background-image' src='/images/blackground.jpg' mode="aspectFill"></image>
+ <view class="box" hidden="{{circularIsShow}}">
+		<view class="circular1"  ></view>
+		<view class="circular2" animation='{{attentionAnim}}'></view>
+		<view class="circular3" animation='{{attentionAnim2}}'></view>
+	</view> 
+
+	<scroll-view enable-flex="true" class="{{blueLength > 5? 'bluetoothCount':'bluetoothCount2'}}" scroll-x="true"  style="z-index:10000;white-space:nowrap;center:center;" >
+
+		<block wx:for="{{devices}}">
+			<view class="ttt">
+				<view style="height:107rpx" class="smallbox" data-id="{{item.deviceId}}" data-name="{{item.name}}" bindtap="createBLEConnection">
+					<image class="fridgeIcon" src="/images/fridege.png" data-name="{{item.name}}" data-id="{{item.deviceId}}" bindlongpress="longPress"></image>
+					<view class="fridge">
+					<text class="fridgeName">{{item.name}}</text>
+					</view>
+					<!-- <text class="fridgeDerviceId">{{item.deviceId}}</text> -->
+				</view>
+			</view>
+		</block>
+
+	</scroll-view>
+
+	<view class="content2">
+		<button class="button" style="width: 130px;" plain="true" hidden="{{status}}" bindtap="startBluetoothDevicesDiscovery">搜索设备</button>
+	</view>
+	<view class="content2" hidden="{{lanyaStatus}}">
+		<image class="bluetooth" src="/images/blueTooth.png" bindtap="stopSearch"></image>
+		<text class="text" >正在为您搜寻设备，单击停止搜索</text>
+		
+	</view>
+
+
+
+
+</view>

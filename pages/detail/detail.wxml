@@ -1,0 +1,71 @@
+<view class="container">
+	<image class='background-image' src='/images/background2.png' mode="aspectFill"></image>
+	<view class="content">
+		<view class="left-box">
+			<text class="text1" bindtap="goLeftSet">温度设置></text>
+			<text class="wendu">{{leftCurrent}}</text>
+			<text class="text1">左仓当前温度</text>
+		</view>
+		<view class="{{rightEmpty ?'right-box':'left-box'}}">
+			<text class="text1" style="{{rightEmpty ?'opacity:0.3':''}}" bindtap="{{rightEmpty ?'':'goRightSet'}}">温度设置></text>
+			<text class="wendu" style="{{rightEmpty ?'opacity:0.3':''}}">{{rightCurrent}}</text>
+			<text class="text1" style="{{rightEmpty ?'opacity:0.3':''}}">右仓当前温度</text>
+		</view>
+		<text class="text2">电压保护</text>
+		<view class="dianya-box">
+			<view class=" dianya-text  dianya-sbox1 {{batSaver==2?'dianji':''}}" bindtap="HOnchange">H</view>
+			<view class=" dianya-text  dianya-sbox2 {{batSaver==1?'dianji':''}}" bindtap="MOnchange">M</view>
+			<view class=" dianya-text dianya-sbox3 {{batSaver==0?'dianji':''}}" bindtap="LOnchange">L</view>
+		</view>
+		<text class="text3">双温控制</text>
+		<view class="shuangwen-box">
+			<view class="shuangwen-sbox1 shuangwen-text {{isIceshow==true?'dianji':''}}" bindtap="IceOnchange">
+				<image class="image-ice" src="/images/cold.png"></image>
+				制冷
+			</view>
+			<view style="{{ishot==true?'null':'display:none'}}" class="shuangwen-sbox2  shuangwen-text {{isHotshow==true?'dianji':''}}" bindtap="HotOnchange">
+				<image class="image-ice" src="/images/hot.png"></image>
+				加热
+			</view>
+		</view>
+		<view class="shuangwen-box"></view>
+		<view class="line"></view>
+		<text class="text4">左仓温度调节  {{leftSet}}{{unit[unit_type]}}</text>
+
+		<text class="slider1-left-text">{{tempMin}}°</text>
+		<view class="slider1">
+			<slider  block-size="23" step="1" value="{{leftSet}}" bindchanging="leftBindchanging" min="{{tempMin}}" max="{{tempMax}}" activeColor="#BCE2FF" bindchange="leftBindchange" />
+		</view>
+		<text class="slider1-right-text" >{{tempMax}}°</text>
+
+
+		<text class="text5" style="{{rightEmpty ?'opacity:0.3':''}}">右仓温度调节 {{rightSet}}{{unit[unit_type]}}</text>
+		<text class="slider2-left-text" style="{{rightEmpty ?'opacity:0.3':''}}">{{tempMin}}°</text>
+		<view class="slider2">
+			<slider block-size="23" step="1" value="1" min="{{tempMin}}" max="{{tempMax}}" value="{{rightSet}}" style="{{rightEmpty ?'opacity:0.3':''}}" activeColor="#BCE2FF" disabled="{{rightEmpty ?'true':''}}" bindchanging="RightBindchanging" bindchange="RightBindchange"/>
+		</view>
+		<text class="slider2-right-text" style="{{rightEmpty ?'opacity:0.3':''}}">{{tempMax}}°</text>
+		<view class="image">
+			<view class="image-icon" bindtap="changeRunMode">
+				<image class="image-icon" src="{{runMode==0?'/images/icon1.png':'/images/isSelectIcon1.png'}}" mode="aspectFill"></image>
+				<text class="text-icon">{{runMode==0?'正常模式':'节能模式'}}</text>
+			</view>
+			<view class="image-icon" bindtap="changeLocked">
+				<image class="image-icon" src="{{locked==0?'/images/icon2.png':'/images/isSelectIcon2.png'}}" mode="aspectFill"></image>
+				<text class="text-icon">{{locked==0?'解锁面板':'锁定面板'}}</text>
+			</view>
+
+			<view class="image-icon" bindtap="changeConnect">
+				<image class="image-icon" src="/images/icon3.png" mode="aspectFill"></image>
+				<text class="text-icon">断开连接</text>
+			</view>
+
+			<view class="image-icon" bindtap="changePoweredOn">
+				<image class="image-icon" src="{{poweredOn==0?'/images/icon4.png':'/images/isSelectIcon4.png'}}" mode="aspectFill"></image>
+				<text class="text-icon">{{poweredOn==0?'打开电源':'关闭电源'}}</text>
+			</view>
+
+		</view>
+	</view>
+
+</view>

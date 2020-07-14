@@ -1,0 +1,81 @@
+<view class="container">
+	<image class='background-image' src='/images/background2.png' mode="aspectFill"></image>
+	<view class="box1">
+		<view class="list-title">
+			<view>常规设置</view>
+		</view>
+		<view class="line"></view>
+		<picker bindchange="bindPickerChangeUnit" value="{{unit_type}}" range="{{unit}}">
+			<view class="list-title">
+				<view>摄氏度/华氏的切换</view>
+				<view class="right">{{unit[unit_type]}} ＞</view>
+			</view>
+		</picker>
+		<view class="line"></view>
+
+		<picker bindchange="bindPickerChangeMax" value="{{max_type}}" range="{{tempMax}}">
+			<view class="list-title">
+				<view>最大调节温度</view>
+				<view class="right">{{tempMax[max_type]}}{{unit[unit_type]}} ＞</view>
+			</view>
+		</picker>
+		<view class="line"></view>
+
+		<picker bindchange="bindPickerChangeMin" value="{{min_type}}" range="{{tempMin}}">
+			<view class="list-title">
+				<view>最小调节温度</view>
+				<view class="right">{{tempMin[min_type]}}{{unit[unit_type]}} ＞</view>
+			</view>
+		</picker>
+		<view class="line"></view>
+
+		<picker bindchange="bindPickerChangeLanguage" value="{{language_type}}" range="{{language}}">
+			<view class="list-title">
+				<view>语言设置</view>
+				<view class="right">{{language[language_type]}} ＞</view>
+			</view>
+		</picker>
+		<view class="line"></view>
+
+		<view class="list-title">
+			<view>高级设置 </view>
+			<view class="right" bindtap="goHightSet"> 非专业人士勿调＞</view>
+		</view>
+		<view class="line"></view>
+
+		<view class="list-title" bindtap="doReset">
+			<view>恢复出厂设置 </view>
+			<view class="right"> ＞</view>
+		</view>
+		<view class="line2"></view>
+	</view>
+
+	<view class="box2">
+		<view class="list-title">
+			<view>关于</view>
+		</view>
+		<view class="line"></view>
+	
+		
+
+		
+			<view class="list-title">
+				<view>客服信息</view>
+				<view class="right">400-800-3613 </view>
+			</view>
+		
+		<view class="line"></view>
+
+		<view class="list-title">
+			<view>应用信息</view>
+			<view class="right">冰虎车载冰箱 </view>
+		</view>
+		<view class="line-last"></view>
+
+		<!-- <view class="list-title">
+			<view>应用信息</view>
+			<view class="right">冰虎车载冰箱 ＞</view>
+		</view>
+		<view class="line2"></view> -->
+	</view>
+</view>

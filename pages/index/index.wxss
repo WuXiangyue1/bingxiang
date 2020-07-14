@@ -1,0 +1,166 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+} 
+
+.ttt{
+  padding:20rpx;
+  display: inline-block;
+
+}
+
+.bluetoothCount{
+  position: absolute;
+  top:68%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.bluetoothCount2{
+  position: absolute;
+  top:68%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background-image{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.content{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   left: 0px;
+   top: 0px;
+   display: flex;
+   justify-content: center;
+   
+}
+.button{
+  position: absolute;
+  top: 85%;
+  border-radius: 11px; 
+}
+
+.bluetooth{
+  position: absolute;
+  top: 81%;
+  width: 50px;
+  height: 50px;
+}
+.text{
+  position: absolute;
+  top: 91%;
+  font-size: x-small;
+  color: rgb(223, 155, 55) ;
+}
+.text2{
+  position: absolute;
+  top: 93%;
+  font-size: x-small;
+  color: rgb(223, 155, 55) ;
+}
+
+.smallbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 67%;
+  width: 55px;
+  height: 67px;
+  background-color: white;
+
+  opacity: 0.7;
+  border-radius: 7px;
+  flex-wrap: wrap;
+  font-size: 15rpx;
+  
+}
+
+.fridgeIcon{
+  position: relative;
+  width: 37px;
+  height: 33px;
+  padding-top: 7rpx;
+}
+.fridge{
+ 
+  display: flex;
+  
+  width: 110rpx;
+  justify-content: center;
+ 
+  
+}
+.fridgeName{
+  position: relative;
+  font-size: x-small;
+  font-weight: 670;
+ 
+  text-align: center;
+  
+  overflow: hidden;
+  text-overflow:ellipsis;
+  
+  width: 100rpx;
+}
+.fridgeDerviceId{
+  position: relative;
+  font-size:17rpx;
+  
+}
+
+
+.content2{
+  display: flex;
+  justify-content: center;
+  
+}
+
+/* pages/circular/circular.wxss */
+
+
+.box{
+  width: 750rpx;
+  height: 63%;
+  position: absolute;
+  bottom: 0;
+  /* background-color: red; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.circular1{
+  width: 750rpx;
+  height: 750rpx;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  position: absolute;
+  bottom:-375rpx;
+}
+
+.circular2{
+  width: 850rpx;
+  height: 850rpx;
+  border-radius: 425rpx;
+  background-color: white;
+  opacity: 0.4;
+  position: absolute;
+  bottom:-375rpx;
+}
+.circular3{
+  width: 950rpx;
+  height: 950rpx;
+  border-radius: 475rpx;
+  background-color: white;
+  opacity: 0.3;
+  position: absolute;
+  bottom:-375rpx;
+}
